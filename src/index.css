@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply text-white antialiased overflow-x-hidden;
+  }
+}
+
+/* Latar gradien beranimasi (ciri khas Bold Vibrant Gradient) */
+.animated-gradient {
+  background: linear-gradient(-45deg, #6d28d9, #db2777, #2563eb, #0d9488);
+  background-size: 400% 400%;
+  animation: gradientShift 18s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-xl border border-white/20;
+}
